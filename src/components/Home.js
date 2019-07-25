@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import  { fetchAllNotes } from '../actions/note_actions';
+import  { fetchAllKronikles } from '../actions/kronikle_actions';
 import AllKronikles from './AllKronikles';
 import EmptyKronikle from './EmptyKronikle'
 
 class Home extends Component {
 
   componentDidMount = () => {
-    this.props.fetchAllNotes()
+    this.props.fetchAllKronikles()
   }
 
   render(){
     return(
       <div className="notesHome">
-      {this.props.notes.length > 0 ? <AllKronikles/> : <EmptyKronikle />}
+      {this.props.kronikles.length > 0 ? <AllKronikles/> : <EmptyKronikle />}
       </div>
     )
   }
@@ -23,13 +23,13 @@ class Home extends Component {
 const mapStateToProps = state => {
   return {
     loading: state.loading,
-    notes: state.notes.notes
+    kronikles: state.kronikles.kronikles
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAllNotes: () => dispatch(fetchAllNotes())
+    fetchAllKronikles: () => dispatch(fetchAllKronikles())
   }
 }
 

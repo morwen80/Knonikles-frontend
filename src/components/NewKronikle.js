@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import  { addNewNote } from '../actions/note_actions';
+import  { addNewKronikle } from '../actions/kronikle_actions';
 
 class NewKronikle extends Component {
   constructor(){
@@ -19,7 +19,7 @@ class NewKronikle extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addNewNote(this.state)
+    this.props.addNewKronikle(this.state)
     this.setState({ title: "", body: "" })
     this.props.history.push('/');
   }
@@ -53,7 +53,7 @@ class NewKronikle extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addNewNote: (newKronikle) => dispatch(addNewNote(newKronikle))
+    addNewKronikle: (newKronikle) => dispatch(addNewKronikle(newKronikle))
   }
 }
 

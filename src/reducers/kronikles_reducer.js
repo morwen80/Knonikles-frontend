@@ -1,13 +1,13 @@
 const initialState = {
   loading: false,
   error: null,
-  notes: []
+  kronikles: []
 }
 
-export default function notesReducer(state = initialState, action){
+export default function kroniklesReducer(state = initialState, action){
   switch(action.type) {
 
-    case 'LOAD_NOTES':
+    case 'LOAD_KRONICKLES':
       return {
         ...state,
         loading: true,
@@ -15,64 +15,64 @@ export default function notesReducer(state = initialState, action){
       };
 
 
-    case 'FETCH_NOTES_ERROR':
+    case 'FETCH_KRONICKLES_ERROR':
       return {
         ...state,
         loading: false,
         error: action.payload.error
     };
 
-    case 'FETCH_NOTES_SUCCESS':
+    case 'FETCH_KRONICKLES_SUCCESS':
     return {
       ...state,
       loading: false,
-      notes: action.payload
+      kronikles: action.payload
     };
 
 
-    case 'ADD_NEW_NOTE_BEGIN':
+    case 'ADD_NEW_KRONIKLE_BEGIN':
     return {
       ...state,
       loading: true,
       error: null
     };
 
-    case 'ADD_NEW_NOTE_SUCCESS':
+    case 'ADD_NEW_KRONIKLE_SUCCESS':
       return {
         ...state,
         loading: false,
         error: null,
-        notes: state.notes.concat(action.payload)
+        kronikles: state.kronikles.concat(action.payload)
       };
-    case 'ADD_NEW_NOTE_ERROR':
+    case 'ADD_NEW_KRONIKLE_ERROR':
       return {
         ...state,
          loading: false,
          error: action.error.message
       }
 
-    case 'DELETE_NOTE':
+    case 'DELETE_KRONIKLE':
       return {
-        notes: state.notes.filter(foodItem => foodItem.id !== action.payload),
+        kronikles: state.kronikles.filter(k => k._id !== action.payload),
       };
 
-    case 'EDIT_NOTE_ATTEMPT':
+    case 'EDIT_KRONIKLE_ATTEMPT':
       return {
         ...state,
          loading: true,
          error: null
       }
 
-    case 'EDIT_NOTE_SUCCESS':
-      const newNoteList = state.notes.map(note => note.id === action.id ? {note: action.payload} : note)
+    case 'EDIT_KRONIKLE_SUCCESS':
+      const newKroniklesList = state.kronikles.map(k => k._id === action._id ? {k: action.payload} : k)
     return {
       ...state,
       loading: false,
       error: null,
-      notes: newNoteList
+      kronikles: newKroniklesList
     };
 
-    case 'EDIT_NOTE_ERROR':
+    case 'EDIT_KRONIKLE_ERROR':
       return {
         ...state,
          loading: false,

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Quicksand|Uncial+Antiqua&display=swap');
 
 :root {
   --brown: #A9898C;
@@ -13,9 +14,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,23 +37,21 @@ ul {
   margin-left: 1rem;
 }
 nav {
-  background-color: var(--grey);
   width: 100%;
   margin-bottom: 2rem;
+  text-align: center;
 }
-nav li {
+nav ul > * {
   display: inline;
   font-size: 2.6rem;
-  padding-left: .7rem;
-  padding-right: .7rem;
-}
-.navLeft {
-  margin-left: 1rem;
+  padding: 0 5%;
 }
 
 #navLogo {
-  float: right;
-  font-size: 2.5rem;
+  padding-top: 1rem;
+  font-family: 'Uncial Antiqua', cursive;
+  text-align: center;
+  font-size: 3.5rem;
   margin: 0 auto;
 }
 

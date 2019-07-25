@@ -11,6 +11,7 @@ import PageNotFound from './components/PageNotFound'
 const App = () => (
   <BrowserRouter>
     <div>
+    <div id="navLogo">Kronikles</div>
       <Header />
       <Switch>
         <Route path='/' component={Home} exact={true} />

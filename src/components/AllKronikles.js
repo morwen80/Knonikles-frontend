@@ -1,24 +1,24 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
-import  { fetchAllNotes } from '../actions/note_actions';
+import  { fetchAllKronikles } from '../actions/kronikle_actions';
 class AllKronikles extends Component {
 
   componentDidMount = () => {
-    this.props.fetchAllNotes()
+    this.props.fetchAllKronikles()
   }
 
   render(){
 
-    const notes = this.props.notes.map(note =>
-    <li key={note._id} id={note._id}>
-      {note.title}
+    const kronikles = this.props.kronikles.map(k =>
+    <li key={k._id} id={k._id}>
+      {k.title}
       <i className="fas fa-chevron-right"></i>
     </li>)
 
     return(
       <div className="KronikleSpace">
       <ul>
-        {notes}
+        {kronikles}
         </ul>
       </div>
     )
@@ -27,12 +27,12 @@ class AllKronikles extends Component {
 
 const mapStateToProps = state => {
   return {
-    notes: state.notes.notes
+    kronikles: state.kronikles.kronikles
   }
 }
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAllNotes: () => dispatch(fetchAllNotes())
+    fetchAllKronikles: () => dispatch(fetchAllKronikles())
   }
 }
 
