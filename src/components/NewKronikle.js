@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import  { addNewNote, fetchAllNotes } from '../actions/note_actions';
+import  { addNewNote } from '../actions/note_actions';
 
 class NewKronikle extends Component {
   constructor(){
@@ -21,7 +21,7 @@ class NewKronikle extends Component {
     e.preventDefault();
     this.props.addNewNote(this.state)
     this.setState({ title: "", body: "" })
-    this.props.fetchAllNotes()
+    this.props.history.push('/');
   }
 
 
@@ -29,7 +29,7 @@ class NewKronikle extends Component {
     return(
       <div className="newKronikleForm">
         <h2>Create a new Kronikle</h2>
-        <form className="newKForm" onSubmit={this.handleSubmit}>
+        <form className="newKForm" onSubmit={this.handleSubmit} >
           <input
             placeholder="title"
             value={this.state.title}
@@ -43,7 +43,7 @@ class NewKronikle extends Component {
             name="body"
             onChange={this.handleChange}
             />
-          <button type="submit">Create!</button>
+          <button type="submit">Create </button>
         </form>
         {this.state.title} {this.state.body}
       </div>
@@ -53,8 +53,7 @@ class NewKronikle extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addNewNote: (newKronikle) => dispatch(addNewNote(newKronikle)),
-    fetchAllNotes: () => dispatch(fetchAllNotes())
+    addNewNote: (newKronikle) => dispatch(addNewNote(newKronikle))
   }
 }
 
