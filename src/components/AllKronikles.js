@@ -9,12 +9,18 @@ class AllKronikles extends Component {
 
   render(){
 
-    const notes = this.props.notes.map(note => <div className="notePreview">{note.title}</div>)
+    const notes = this.props.notes.map(note => <div className="notePreview">
+    <li>
+      {note.title}
+      <i className="fas fa-chevron-right"></i>
+    </li>
+    </div>)
 
     return(
       <div className="KronikleSpace">
-
+      <ul>
         {notes}
+        </ul>
       </div>
     )
   }

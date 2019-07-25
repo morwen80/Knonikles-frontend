@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 // import ReactModal from 'react-modal';
-// import { connect } from 'react-redux';
-// import  { addNewNote } from '../actions/note_actions';
-import NewKronikle from './NewKronikle'
+
 // ReactModal.setAppElement('.KronikleSpace');
 
 class Header extends Component{
@@ -13,7 +11,7 @@ class Header extends Component{
       <nav>
       <ul className="navLeft">
         <li>K</li>
-        <li><i className="fas fa-copy" alt="All Kronikles"></i></li>
+        <NavLink activeClassName="is-active" to='/all'><i className="fas fa-copy" alt="All Kronikles"></i></NavLink>
         <NavLink activeClassName="is-active" to='/new'><i className="fas fa-plus" alt="Add Kronikle"></i></NavLink>
       </ul>
       <span id="navLogo">Kronikles</span>

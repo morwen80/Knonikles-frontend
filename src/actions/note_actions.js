@@ -7,10 +7,10 @@ export function fetchAllNotes() {
   }
 };
 
-export function addNewNote(newNote) {
-  const noteCreated = {
-    title: newNote.title,
-    note: newNote.body
+export function addNewNote(newKronikle) {
+  const kronikleCreated = {
+    title: newKronikle.title,
+    body: newKronikle.body
   }
   return (dispatch) => {
     dispatch({ type: 'LOAD_NOTES' });
@@ -21,7 +21,7 @@ export function addNewNote(newNote) {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(noteCreated)
+      body: JSON.stringify(kronikleCreated)
     })
     .then(response => response.json())
     .then(notes => {

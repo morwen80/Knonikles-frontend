@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import  { addNewNote } from '../actions/note_actions';
+import  { addNewNote, fetchAllNotes } from '../actions/note_actions';
 
 class NewKronikle extends Component {
   constructor(){
     super()
     this.state = {
       title: "",
-      note: ""
+      body: ""
     }
   }
 
@@ -20,13 +20,15 @@ class NewKronikle extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addNewNote(this.state)
-    this.setState({ title: "", note: "" })
+    this.setState({ title: "", body: "" })
+    this.props.fetchAllNotes()
   }
 
 
   render(){
     return(
-      <div className="newKronikle">
+      <div className="newKronikleForm">
+        <h2>Create a new Kronikle</h2>
         <form className="newKForm" onSubmit={this.handleSubmit}>
           <input
             placeholder="title"
@@ -37,12 +39,13 @@ class NewKronikle extends Component {
 
           <input
             placeholder="kronikle"
-            value={this.state.note}
+            value={this.state.body}
             name="body"
             onChange={this.handleChange}
             />
           <button type="submit">Create!</button>
         </form>
+        {this.state.title} {this.state.body}
       </div>
     )
   }
@@ -50,7 +53,8 @@ class NewKronikle extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addNewNote: (newNote) => dispatch(addNewNote())
+    addNewNote: (newKronikle) => dispatch(addNewNote(newKronikle)),
+    fetchAllNotes: () => dispatch(fetchAllNotes())
   }
 }
 

@@ -16,7 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+ul {
+  list-style: none;
+}
 /* HEADER */
 nav {
   background-color: grey;
@@ -44,7 +51,7 @@ nav li {
 
 
 /* HOMEPAGE WITH ALL THE NOTES PREVIEW */
-.notesHome {
+.KronikleSpace{
   border-radius: 15px;
   width: 80%;
   border: 2px solid grey;
@@ -52,8 +59,35 @@ nav li {
   padding: 0;
 }
 
-.notesHome > * {
+.notePreview li {
   font-size: 2rem;
   padding: .7rem 1rem .7rem 1rem;
   border-bottom: 1px solid grey;
+}
+
+.fa-chevron-right {
+  float: right;
+}
+
+/* NEW KRONIKLE */
+.newKronikleForm {
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  width: 80%;
+}
+
+.newKForm input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+}
+.newKForm input[name="body"] {
+  height: 40vh;
+  margin-bottom: 1rem;
+}
+.newKForm button {
+  font-size: 1rem;
+  padding: .6rem 1rem;
+  border-radius: 5px;
+  background-color: orange;
 }
