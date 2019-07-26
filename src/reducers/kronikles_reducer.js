@@ -30,6 +30,17 @@ export default function kroniklesReducer(state = initialState, action){
     };
 
 
+    case 'FETCH_SINGLE_KRONICLE':
+      const selectedKronicle= state.kronikles.map(k => k._id === action._id ? {k: action.payload} : k )
+
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        kronikles: selectedKronicle
+      };
+
+
     case 'ADD_NEW_KRONIKLE_BEGIN':
     return {
       ...state,
@@ -44,6 +55,7 @@ export default function kroniklesReducer(state = initialState, action){
         error: null,
         kronikles: state.kronikles.concat(action.payload)
       };
+
     case 'ADD_NEW_KRONIKLE_ERROR':
       return {
         ...state,
@@ -53,7 +65,7 @@ export default function kroniklesReducer(state = initialState, action){
 
     case 'DELETE_KRONIKLE':
       return {
-        kronikles: state.kronikles.filter(k => k._id !== action.payload),
+        kronikles: state.kronikles.filter(k => k._id !== action.payload)
       };
 
     case 'EDIT_KRONIKLE_ATTEMPT':

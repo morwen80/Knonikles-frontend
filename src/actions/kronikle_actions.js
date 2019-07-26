@@ -7,6 +7,28 @@ export function fetchAllKronikles() {
   }
 };
 
+
+export function fetchSingleKronikle(id) {
+  return (dispatch) => { dispatch({ type: 'LOAD_KRONICKLES' });
+
+    return fetch('http://localhost:3000/notes/')
+      .then(response => response.json())
+      .then(kronikles => dispatch({ type: 'FETCH_SINGLE_KRONICLE', payload: kronikles }));
+  }
+};
+//
+// export function fetchSingleKronikle(id){
+//   debugger
+//     return (dispatch) => {
+//     dispatch({ type: 'FETCH_SINGLE_KRONICLE', payload: id });
+//
+//     return fetch(`http://localhost:3000/notes/${id}`)
+//       .then(response => response.json())
+//       .then(kronikle => dispatch({ type: 'FETCH_KRONICKLES_SUCCESS', payload: kronikle }));
+//     }
+//   };
+
+
 export function addNewKronikle(newKronikle) {
   const kronikleCreated = {
     title: newKronikle.title,

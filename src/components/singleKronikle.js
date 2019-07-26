@@ -1,12 +1,34 @@
-import React, {Component} from 'react'
 
-class singleKronikle extends Component {
-    render(){
-      return(
+import React from 'react';
+import {connect} from 'react-redux';
+import {editKronikle, deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
-      )
-    }
+const SingleKronikle = ({ kronikle }) =>
+
+        <div className="singleKronikle">
+          <h1>{kronikle.title}</h1>
+          <h3>{kronikle.body}</h3>
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+
+
+const mapStateToProps = (state, ownProps) => {
+   const kronikle = state.kronikles.kronikles.find(k => k._id === ownProps.match.params.id)
+   if (kronikle) {
+     return { kronikle }
+   } else {
+     return { kronikle: {} }
+   }
+ }
+
+
+
+const mapDispatchToProps = dispatch => {
+  return {
+    editKronikle: (kronikle) => dispatch(editKronikle(kronikle)),
+    deleteKronikle: (id) => dispatch(deleteKronikle(id))
+  }
 }
 
-
-export default singleKronikle
+export default connect(mapStateToProps, mapDispatchToProps)(SingleKronikle)
