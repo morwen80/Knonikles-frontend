@@ -1,7 +1,8 @@
-
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
+
+import SingleKronikle from './SingleKronikle'
 import  { fetchAllKronikles, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 
@@ -11,34 +12,18 @@ class AllKronikles extends Component {
     this.props.fetchAllKronikles()
   }
 
-  // openSingleKronicle = (k) => {
-  //   // e.stopPropagation();
-  //   this.props.fetchSingleKronikle(k._id)
-  // }
-
   render(){
-
-    // const kronikles = this.props.kronikles.map(k =>
-    // <li key={k._id} id={k._id} onClick={() => this.openSingleKronicle(k)}>
-    // <Link to={`/notes/${k._id}`}>{k.title}</Link>
-    //   <i className="fas fa-chevron-right"></i>
-    // </li>
-    // )
-
-    const kronikles = this.props.kronikles.map( k =>
-      <li key={k._id} id={k._id}>
-        <Link to={`notes/${k._id}`}>
-          {k.title}
-        </Link>
-      </li>
-    )
-
     return(
-      <div className="KronikleSpace">
+      <React.Fragment>
       <ul>
-        {kronikles}
-        </ul>
-      </div>
+      {this.props.kronikles.map(( { title, _id }) => (
+        <li key={_id} id={_id}>
+          <Link to={`/${_id}`}>{title}</Link>
+        </li>
+      ))}
+      </ul>
+
+      </React.Fragment>
     )
   }
 }

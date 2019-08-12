@@ -97,3 +97,9 @@ nav ul > * {
   border-radius: 5px;
   background-color: orange;
 }
+
+/* SINGLE KRONIKLE  */
+.singleKronikle {
+  margin: 0 auto;
+  width: 80%;
+}
