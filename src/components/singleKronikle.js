@@ -3,20 +3,41 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {editKronikle, deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
-const SingleKronikle = ({ kronikle }) => {
+class SingleKronikle extends React.Component {
+  constructor(props){
+  super(props)
+  this.state = {
+    title: '',
+    body: ''
+  }
+}
 
-console.log(kronikle)
+componentDidMount(){
+  let id = this.props.match.params.id
+  // this.props.fetchSingleKronikle(id);
 
+  return fetch(`http://localhost:3000/kronikles/${id}`)
+    .then(resp => resp.json())
+    .then(data => this.setState({
+      title: data[0].title,
+      body: data[0].body
+    }))
 
-return(
-        <div className="singleKronikle">
-          <div className="kTitle">{kronikle.title}</div>
+}
 
-          <h3>{kronikle.body}</h3>
-          <button >Edit</button>
-          <button >Delete</button>
-        </div>
-)
+render(){
+
+  console.log(this.props.params)
+  return(
+    <div className="singleKronikle">
+      <div className="kTitle">{this.state.title}</div>
+
+      <h3>{this.state.body}</h3>
+      <button >Edit</button>
+      <button >Delete</button>
+    </div>
+  )
+}
 }
 
 const mapStateToProps = (state, ownProps) => {

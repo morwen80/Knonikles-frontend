@@ -20,7 +20,7 @@ const App = () =>
 
         <Route path='/' component={Home} exact={true} />
         <Route path='/kronikles' component={AllKronikles} exact={true} />
-        <Route path='/:id' component={SingleKronikle} exact={true} />
+        <Route path='/kronikles/:id' component={SingleKronikle} exact={true} />
 
         <Route path='/new' component={NewKronikle} />
         <Route path='/about' component={About} />

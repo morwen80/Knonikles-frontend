@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import SingleKronikle from './SingleKronikle'
+// import SingleKronikle from './SingleKronikle'
 import  { fetchAllKronikles, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 
@@ -12,15 +12,17 @@ class AllKronikles extends Component {
     this.props.fetchAllKronikles()
   }
 
+
   render(){
+    const kList = this.props.kronikles.map( k =>
+      <li key={k._id}>
+      <Link to={`/kronikles/${k._id}`}>{k.title}</Link>
+      </li>
+    )
     return(
       <React.Fragment>
       <ul>
-      {this.props.kronikles.map(( { title, _id }) => (
-        <li key={_id} id={_id}>
-          <Link to={`/${_id}`}>{title}</Link>
-        </li>
-      ))}
+        {kList}
       </ul>
 
       </React.Fragment>

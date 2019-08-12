@@ -1,7 +1,7 @@
 export function fetchAllKronikles() {
   return (dispatch) => { dispatch({ type: 'LOAD_KRONICKLES' });
 
-    return fetch('http://localhost:3000/notes/')
+    return fetch('http://localhost:3000/kronikles/')
       .then(response => response.json())
       .then(kronikles => dispatch({ type: 'FETCH_KRONICKLES_SUCCESS', payload: kronikles }));
   }
@@ -11,7 +11,7 @@ export function fetchAllKronikles() {
 export function fetchSingleKronikle(id) {
   return (dispatch) => { dispatch({ type: 'LOAD_KRONICKLES' });
 
-    return fetch('http://localhost:3000/notes/')
+    return fetch(`http://localhost:3000/kronikles/${id}`)
       .then(response => response.json())
       .then(kronikles => dispatch({ type: 'FETCH_SINGLE_KRONICLE', payload: kronikles }));
   }
@@ -22,7 +22,7 @@ export function fetchSingleKronikle(id) {
 //     return (dispatch) => {
 //     dispatch({ type: 'FETCH_SINGLE_KRONICLE', payload: id });
 //
-//     return fetch(`http://localhost:3000/notes/${id}`)
+//     return fetch(`http://localhost:3000/kronikles/${id}`)
 //       .then(response => response.json())
 //       .then(kronikle => dispatch({ type: 'FETCH_KRONICKLES_SUCCESS', payload: kronikle }));
 //     }
@@ -37,7 +37,7 @@ export function addNewKronikle(newKronikle) {
   return (dispatch) => {
     dispatch({ type: 'LOAD_KRONICKLES' });
 
-    fetch('http://localhost:3000/notes', {
+    fetch('http://localhost:3000/kronikles', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -57,7 +57,7 @@ export function deleteKronikle(id) {
   return (dispatch) => {
     dispatch({ type: 'DELETE_KRONIKLE', payload: id });
 
-    return fetch(`http://localhost:3000/notes/${id}`, {
+    return fetch(`http://localhost:3000/kronikles/${id}`, {
       method: 'DELETE'}
     )
     .then(response => response.json())
@@ -67,7 +67,7 @@ export function deleteKronikle(id) {
 export function editKronikle(kronikle) {
   return (dispatch) => { dispatch({ type: 'EDIT_KRONIKLE_ATTEMPT' });
 
-    return fetch(`http://localhost:3000/notes/${kronikle._id}`, {
+    return fetch(`http://localhost:3000/kronikles/${kronikle._id}`, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json',
