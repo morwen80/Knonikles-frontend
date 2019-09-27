@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { connect } from 'react-redux';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home'
@@ -14,8 +13,6 @@ import EditKronikle from './components/EditKronikle'
 const App = () =>
   <BrowserRouter>
     <div>
-
-    <div id="navLogo">Kronikles</div>
       <Header />
       <Switch>
 

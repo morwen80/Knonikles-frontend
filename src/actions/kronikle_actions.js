@@ -7,7 +7,6 @@ export function fetchAllKronikles() {
   }
 };
 
-
 export function fetchSingleKronikle(id) {
   return (dispatch) => { dispatch({ type: 'LOAD_KRONICKLES' });
 
@@ -16,18 +15,6 @@ export function fetchSingleKronikle(id) {
       .then(kronikles => dispatch({ type: 'FETCH_SINGLE_KRONICLE', payload: kronikles }));
   }
 };
-//
-// export function fetchSingleKronikle(id){
-//   debugger
-//     return (dispatch) => {
-//     dispatch({ type: 'FETCH_SINGLE_KRONICLE', payload: id });
-//
-//     return fetch(`http://localhost:3000/kronikles/${id}`)
-//       .then(response => response.json())
-//       .then(kronikle => dispatch({ type: 'FETCH_KRONICKLES_SUCCESS', payload: kronikle }));
-//     }
-//   };
-
 
 export function addNewKronikle(newKronikle) {
   const kronikleCreated = {
@@ -48,7 +35,6 @@ export function addNewKronikle(newKronikle) {
     .then(response => response.json())
     .then(allKronikles => {
       dispatch({ type: 'ADD_NEW_KRONIKLE_SUCCESS', payload: allKronikles })
-
     })
       .catch(error => dispatch({ type: 'ADD_NEW_KRONIKLE_ERROR', error: error.message }));
   }
@@ -64,7 +50,6 @@ export function deleteKronikle(id) {
     .then(response => response.json())
     .then(remainingKronikles => {
       dispatch({ type: 'DELETE_KRONIKLE_SUCCESS', payload: remainingKronikles })
-
     })
       .catch(error => dispatch({ type: 'DELETE_KRONIKLE_ERROR', error: error.message }));
   }
@@ -72,7 +57,9 @@ export function deleteKronikle(id) {
 
 
 export function editKronikle(kronikle) {
-  return (dispatch) => { dispatch({ type: 'EDIT_KRONIKLE_ATTEMPT' });
+  console.log(kronikle)
+  return (dispatch) => {
+    dispatch({ type: 'EDIT_KRONIKLE_ATTEMPT' });
 
     return fetch(`http://localhost:3000/kronikles/${kronikle._id}`, {
       method: 'PUT',
@@ -83,7 +70,11 @@ export function editKronikle(kronikle) {
       body: JSON.stringify(kronikle)
         })
         .then(resp => resp.json())
-        .then(k => dispatch({ type: 'EDIT_KRONIKLE_SUCCESS', payload: k}))
+        .then(allKronikles => {
+          console.log(allKronikles)
+          // dispatch({ type: 'EDIT_KRONIKLE_SUCCESS', payload: allKronikles})
+        })
+
         .catch(error => dispatch({ type: 'EDIT_KRONIKLE_ERROR', error: error.message }));
     }
 };

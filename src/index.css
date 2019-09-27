@@ -1,35 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Quicksand|Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Quicksand|Noto+Sans|Uncial+Antiqua&display=swap');
 
-:root {
-  --brown: #A9898C;
-  --grey: #A8A1A8;
-  --darkGrey: #393F4F;
-  --ice: #7987A1;
-}
-button {
-  background-color: grey;
-  color: white;
-  padding: .5rem 1rem;
-  border-radius: 3px;
-}
 * {
   padding: 0;
   margin: 0;
 }
 
+:root {
+  --brown: #E8D8BD;
+  --darkBrown: #714a12;
+  --darkGreen: #353121;
+  --grey: #A8A1A8;
+  --darkGrey: #393F4F;
+  --gold: #c88905;
+}
+a:link, a:visited  {
+  color: var(--gold);
+  text-decoration: none;
+}
+button {
+  background-color: var(--grey);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 3px;
+}
+
+
 body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  background-color: var(--brown);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 h2 {
   text-align: center;
+  color: var(--darkBrown);
   font-size: 2rem;
   padding-bottom: 1.5rem;
 }
@@ -45,6 +51,7 @@ nav {
   width: 100%;
   margin-bottom: 2rem;
   text-align: center;
+  background-color: var(--darkGreen);
 }
 nav ul > * {
   display: inline;
@@ -55,9 +62,11 @@ nav ul > * {
 #navLogo {
   padding-top: 1rem;
   font-family: 'Uncial Antiqua', cursive;
+  color: var(--darkBrown);
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   margin: 0 auto;
+
 }
 
 
