@@ -27,7 +27,8 @@ render(){
     <div className="editKronikle">
       <form>
         <input type="text" placeholder={title} />
-        <input type="text" placeholder={body} />
+        <br/>
+        <textarea type="text" placeholder={body} />
       </form>
       <button>Submit edited Kronikle</button>
     </div>
