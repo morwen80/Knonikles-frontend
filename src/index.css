@@ -117,16 +117,32 @@ nav ul > * {
   resize: none;
 }
 
-.newKForm button {
+.newKForm button, .singleKronikle button {
   font-size: 1rem;
   padding: .6rem 1.3rem;
   border-radius: 5px;
   background-color: var(--gold);
   font-weight: 700;
+  margin-right: .6rem;
 }
 
 /* SINGLE KRONIKLE  */
 .singleKronikle {
   margin: 0 auto;
   width: 80%;
+}
+.kTitle {
+  font-family: 'Uncial Antiqua', cursive;
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--darkBrown);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.kBody {
+  font-size: 1.3rem;
+  color: var(--darkBrown);
+}
+.singleKronikle button {
+  margin-top: 1rem;
 }

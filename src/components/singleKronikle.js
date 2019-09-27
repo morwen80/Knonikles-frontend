@@ -34,9 +34,7 @@ render(){
   return(
     <div className="singleKronikle">
       <div className="kTitle">{title}</div>
-
-      <h3>{body}</h3>
-
+      <div className="kBody">{body}</div>
 
       <Link to={`/kronikles/${_id}/edit`}>
         <button>Edit</button>
