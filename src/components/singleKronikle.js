@@ -1,54 +1,50 @@
-
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import {editKronikle, deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class SingleKronikle extends React.Component {
   constructor(props){
   super(props)
   this.state = {
-    title: '',
-    body: ''
+    kronikle: []
   }
 }
 
 componentDidMount(){
   let id = this.props.match.params.id
-  // this.props.fetchSingleKronikle(id);
 
   return fetch(`http://localhost:3000/kronikles/${id}`)
     .then(resp => resp.json())
     .then(data => this.setState({
-      title: data[0].title,
-      body: data[0].body
+      kronikle: data[0]
     }))
+}
+
+
+editK = () => {
 
 }
 
 render(){
+  const { _id, title, body } = this.state.kronikle
 
-  console.log(this.props.params)
   return(
     <div className="singleKronikle">
-      <div className="kTitle">{this.state.title}</div>
+      <div className="kTitle">{title}</div>
 
-      <h3>{this.state.body}</h3>
-      <button >Edit</button>
+      <h3>{body}</h3>
+
+
+      <Link to={`/kronikles/${_id}/edit`}>
+        <button>Edit</button>
+      </Link>
+
       <button >Delete</button>
     </div>
   )
 }
 }
-
-const mapStateToProps = (state, ownProps) => {
-   const kronikle = state.kronikles.kronikles.find(k => k._id === ownProps.match.params.kronikleId)
-   if (kronikle) {
-     return { kronikle }
-   } else {
-     return { kronikle: {} }
-
-   }
- }
 
 
 const mapDispatchToProps = dispatch => {
@@ -59,4 +55,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleKronikle)
+export default connect(null, mapDispatchToProps)(SingleKronikle)

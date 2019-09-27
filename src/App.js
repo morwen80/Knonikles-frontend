@@ -9,6 +9,7 @@ import NewKronikle from './components/NewKronikle'
 import SingleKronikle from './components/SingleKronikle'
 import AllKronikles from './components/AllKronikles'
 import PageNotFound from './components/PageNotFound'
+import EditKronikle from './components/EditKronikle'
 
 const App = () =>
   <BrowserRouter>
@@ -21,7 +22,7 @@ const App = () =>
         <Route path='/' component={Home} exact={true} />
         <Route path='/kronikles' component={AllKronikles} exact={true} />
         <Route path='/kronikles/:id' component={SingleKronikle} exact={true} />
-
+        <Route path='/kronikles/:id/edit' component={EditKronikle} exact={true} />
         <Route path='/new' component={NewKronikle} />
         <Route path='/about' component={About} />
         <Route component={PageNotFound} />

@@ -6,7 +6,12 @@
   --darkGrey: #393F4F;
   --ice: #7987A1;
 }
-
+button {
+  background-color: grey;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 3px;
+}
 * {
   padding: 0;
   margin: 0;

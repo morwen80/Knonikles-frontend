@@ -65,6 +65,7 @@ export function deleteKronikle(id) {
 };
 
 export function editKronikle(kronikle) {
+
   return (dispatch) => { dispatch({ type: 'EDIT_KRONIKLE_ATTEMPT' });
 
     return fetch(`http://localhost:3000/kronikles/${kronikle._id}`, {
