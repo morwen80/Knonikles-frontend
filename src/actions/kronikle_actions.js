@@ -62,8 +62,13 @@ export function deleteKronikle(id) {
       method: 'DELETE'}
     )
     .then(response => response.json())
+    .then(remainingKronikles => {
+      dispatch({ type: 'DELETE_KRONIKLE_SUCCESS', payload: remainingKronikles })
+
+    })
+      .catch(error => dispatch({ type: 'DELETE_KRONIKLE_ERROR', error: error.message }));
   }
-};
+  };
 
 
 export function editKronikle(kronikle) {

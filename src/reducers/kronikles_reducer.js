@@ -68,6 +68,22 @@ export default function kroniklesReducer(state = initialState, action){
         kronikles: state.kronikles.filter(k => k._id !== action.payload)
       };
 
+    case 'DELETE_KRONIKLE_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        kronikles: action.payload
+      };
+
+      case 'DELETE_KRONIKLE_ERROR':
+        return {
+          ...state,
+           loading: false,
+           error: action.error.message
+        };
+
+
     case 'EDIT_KRONIKLE_ATTEMPT':
       return {
         ...state,
