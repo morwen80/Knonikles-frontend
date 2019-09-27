@@ -35,7 +35,7 @@ export function addNewKronikle(newKronikle) {
     body: newKronikle.body
   }
   return (dispatch) => {
-    dispatch({ type: 'LOAD_KRONICKLES' });
+    dispatch({ type: 'ADD_NEW_KRONIKLE_BEGIN' });
 
     fetch('http://localhost:3000/kronikles', {
       method: 'POST',
@@ -46,8 +46,9 @@ export function addNewKronikle(newKronikle) {
       body: JSON.stringify(kronikleCreated)
     })
     .then(response => response.json())
-    .then(k => {
-      dispatch({ type: 'ADD_NEW_KRONIKLE_SUCCESS', payload: k })
+    .then(allKronikles => {
+      dispatch({ type: 'ADD_NEW_KRONIKLE_SUCCESS', payload: allKronikles })
+
     })
       .catch(error => dispatch({ type: 'ADD_NEW_KRONIKLE_ERROR', error: error.message }));
   }
@@ -64,12 +65,12 @@ export function deleteKronikle(id) {
   }
 };
 
-export function editKronikle(kronikle) {
 
+export function editKronikle(kronikle) {
   return (dispatch) => { dispatch({ type: 'EDIT_KRONIKLE_ATTEMPT' });
 
     return fetch(`http://localhost:3000/kronikles/${kronikle._id}`, {
-      method: 'PATCH',
+      method: 'PUT',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

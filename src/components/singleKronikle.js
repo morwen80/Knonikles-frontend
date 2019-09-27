@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
-import {editKronikle, deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
+import {deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class SingleKronikle extends React.Component {
   constructor(props){
@@ -9,6 +9,12 @@ class SingleKronikle extends React.Component {
   this.state = {
     kronikle: []
   }
+}
+
+onDelete = () => {
+  // e.preventDefault()
+  this.props.deleteKronikle(this.state.kronikle._id)
+  this.props.history.push('/');
 }
 
 componentDidMount(){
@@ -21,10 +27,6 @@ componentDidMount(){
     }))
 }
 
-
-editK = () => {
-
-}
 
 render(){
   const { _id, title, body } = this.state.kronikle
@@ -40,7 +42,7 @@ render(){
         <button>Edit</button>
       </Link>
 
-      <button >Delete</button>
+      <button onClick={this.onDelete}>Delete</button>
     </div>
   )
 }
@@ -50,7 +52,6 @@ render(){
 const mapDispatchToProps = dispatch => {
   return {
     fetchSingleKronikle: (id) => dispatch(fetchSingleKronikle(id)),
-    editKronikle: (kronikle) => dispatch(editKronikle(kronikle)),
     deleteKronikle: (id) => dispatch(deleteKronikle(id))
   }
 }

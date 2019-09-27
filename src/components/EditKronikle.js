@@ -6,7 +6,8 @@ class EditKronikle extends React.Component {
   constructor(){
     super()
     this.state = {
-      kronikle: []
+      title: "",
+      body: ""
     }
   }
 
@@ -15,22 +16,38 @@ class EditKronikle extends React.Component {
     return fetch(`http://localhost:3000/kronikles/${id}`)
       .then(resp => resp.json())
       .then(data => this.setState({
-        kronikle: data[0]
+        title: data[0].title,
+        body: data[0].body
       }))
   }
 
 
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.editKronikle([this.state.title, this.state.body])
+    // this.setState({ title: "", body: "" })
+    this.props.history.push('/');
+  }
+
+
 render(){
-  const { title, body } = this.state.kronikle
+  const { title, body } = this.state
 
   return (
     <div className="editKronikle">
-      <form>
-        <input type="text" placeholder={title} />
+      <form className="editKForm" onSubmit={this.handleSubmit} >
+        <input type="text" name="title" value={title} onChange={this.handleChange}/>
         <br/>
-        <textarea type="text" placeholder={body} />
+        <textarea name="body" value={body} onChange={this.handleChange}/>
+        <button type="submit">Submit edited Kronikle</button>
       </form>
-      <button>Submit edited Kronikle</button>
+
     </div>
   )
 }}

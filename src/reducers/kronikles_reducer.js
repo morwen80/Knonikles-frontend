@@ -53,7 +53,7 @@ export default function kroniklesReducer(state = initialState, action){
         ...state,
         loading: false,
         error: null,
-        kronikles: state.kronikles.concat(action.payload)
+        kronikles: action.payload
       };
 
     case 'ADD_NEW_KRONIKLE_ERROR':

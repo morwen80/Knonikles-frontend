@@ -20,7 +20,7 @@ class NewKronikle extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addNewKronikle(this.state)
-    this.setState({ title: "", body: "" })
+    // this.setState({ title: "", body: "" })
     this.props.history.push('/');
   }
 
@@ -45,7 +45,6 @@ class NewKronikle extends Component {
             />
           <button type="submit">Create </button>
         </form>
-        {this.state.title} {this.state.body}
       </div>
     )
   }
