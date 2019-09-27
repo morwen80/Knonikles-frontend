@@ -27,8 +27,10 @@ class NewKronikle extends Component {
 
   render(){
     return(
+      <React.Fragment>
+      <h2>Create a new Kronikle</h2>
       <div className="newKronikleForm">
-        <h2>Create a new Kronikle</h2>
+
         <form className="newKForm" onSubmit={this.handleSubmit} >
           <input
             placeholder="title"
@@ -37,7 +39,7 @@ class NewKronikle extends Component {
             onChange={this.handleChange}
             />
 
-          <input
+          <textarea
             placeholder="kronikle"
             value={this.state.body}
             name="body"
@@ -46,6 +48,7 @@ class NewKronikle extends Component {
           <button type="submit">Create </button>
         </form>
       </div>
+      </React.Fragment>
     )
   }
 }

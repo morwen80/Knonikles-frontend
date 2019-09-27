@@ -1,17 +1,13 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
-
-// import SingleKronikle from './SingleKronikle'
 import  { fetchAllKronikles, fetchSingleKronikle } from '../actions/kronikle_actions';
-
 
 class AllKronikles extends Component {
 
   componentDidMount = () => {
     this.props.fetchAllKronikles()
   }
-
 
   render(){
     const kList = this.props.kronikles.map( k =>
@@ -20,12 +16,11 @@ class AllKronikles extends Component {
       </li>
     )
     return(
-      <React.Fragment>
+      <div id="kronikleSpace">
       <ul>
         {kList}
       </ul>
-
-      </React.Fragment>
+      </div>
     )
   }
 }

@@ -71,18 +71,22 @@ nav ul > * {
 
 
 /* HOMEPAGE WITH ALL THE NOTES PREVIEW */
-.KronikleSpace{
-  border-radius: 15px;
+#kronikleSpace {
+  border-radius: 10px;
   width: 80%;
-  border: 2px solid grey;
+  border: 2px solid var(--darkBrown);
   margin: 0 auto;
-  padding: 0;
+  padding: 1.3rem;
 }
 
-.KronikleSpace li {
-  font-size: 2rem;
+#kronikleSpace li {
+  font-size: 1.7rem;
+  font-weight: 700;
   padding: .7rem 1rem .7rem 1rem;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--darkBrown);
+}
+#kronikleSpace li:last-child {
+  border-bottom: none;
 }
 
 .fa-chevron-right {
@@ -92,24 +96,33 @@ nav ul > * {
 /* NEW KRONIKLE */
 .newKronikleForm {
   margin: 0 auto;
-  /* border: 1px solid black; */
   width: 80%;
 }
 
-.newKForm input {
-  display: block;
-  width: 100%;
+.newKForm input, .newKForm textarea {
+  border: 1px solid var(--darkBrown);
+  width: 95%;
   padding: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
 }
-.newKForm input[name="body"] {
+/* .newKForm input[name="body"] {
   height: 40vh;
   margin-bottom: 1rem;
+} */
+
+.newKForm textarea {
+  height: 40vh;
+  margin-bottom: .6rem;
+  resize: none;
 }
+
 .newKForm button {
   font-size: 1rem;
-  padding: .6rem 1rem;
+  padding: .6rem 1.3rem;
   border-radius: 5px;
-  background-color: orange;
+  background-color: var(--gold);
+  font-weight: 700;
 }
 
 /* SINGLE KRONIKLE  */
