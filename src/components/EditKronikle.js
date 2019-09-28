@@ -41,6 +41,7 @@ render(){
 
   return (
     <div className="editKronikle">
+      <h2>Edit your Kronikle</h2>
       <form className="editKForm" onSubmit={this.handleSubmit} >
         <input type="text" name="title" value={title} onChange={this.handleChange}/>
         <br/>

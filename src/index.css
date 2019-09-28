@@ -94,22 +94,20 @@ nav ul > * {
 }
 
 /* NEW KRONIKLE */
-.newKronikleForm {
+.newKronikleForm, .editKForm {
   margin: 0 auto;
   width: 80%;
 }
 
-.newKForm input, .newKForm textarea {
+.newKForm input, .newKForm textarea,
+.editKForm input, .editKForm textarea
+ {
   border: 1px solid var(--darkBrown);
   width: 95%;
   padding: 1rem;
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.1rem;
 }
-/* .newKForm input[name="body"] {
-  height: 40vh;
-  margin-bottom: 1rem;
-} */
 
 .newKForm textarea {
   height: 40vh;
@@ -117,7 +115,8 @@ nav ul > * {
   resize: none;
 }
 
-.newKForm button, .singleKronikle button {
+.newKForm button, .singleKronikle button,
+.editKForm button {
   font-size: 1rem;
   padding: .6rem 1.3rem;
   border-radius: 5px;
@@ -145,4 +144,12 @@ nav ul > * {
 }
 .singleKronikle button {
   margin-top: 1rem;
+}
+
+/* EDIT A KRONIKLE */
+.editKForm input, .editKForm textarea {
+  color: var(--grey);
+}
+.editKForm input:focus, .editKForm textarea:focus {
+  color: var(--darkBrown);
 }
