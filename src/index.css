@@ -12,6 +12,7 @@
   --grey: #A8A1A8;
   --darkGrey: #393F4F;
   --gold: #c88905;
+  --red: #c94808;
 }
 a:link, a:visited  {
   color: var(--gold);
@@ -126,12 +127,12 @@ nav ul > * {
   margin-right: .6rem;
 }
 #deleteBtn {
-  background-color: red;
+  background-color: var(--red);
   color: black;
 }
 
 #backBtn {
-  padding-top: 1.5rem;
+  margin-top: 3.5rem;
   border: 1px solid var(--brown);
   background-color: var(--brown);
   padding: 0;
@@ -139,6 +140,7 @@ nav ul > * {
 #backBtn .fas {
   font-size: 1.6rem;
   color: var(--darkGrey);
+  margin: 0;
 }
 
 /* SINGLE KRONIKLE  */

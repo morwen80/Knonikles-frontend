@@ -14,7 +14,7 @@ class NewKronikle extends Component {
   handleChange = (e) => {
     if(this.state.title.length < 1) {
       this.setState({ title: "No Title"})
-    } 
+    }
 
     this.setState({
       [e.target.name]: e.target.value
@@ -23,9 +23,6 @@ class NewKronikle extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
-
-
     this.props.addNewKronikle(this.state)
     this.props.history.push('/');
   }
