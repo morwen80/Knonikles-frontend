@@ -57,12 +57,12 @@ export function deleteKronikle(id) {
 
 
 export function editKronikle(kronikle) {
-  console.log(kronikle)
+
   return (dispatch) => {
     dispatch({ type: 'EDIT_KRONIKLE_ATTEMPT' });
 
-    return fetch(`http://localhost:3000/kronikles/${kronikle._id}`, {
-      method: 'PUT',
+    return fetch(`http://localhost:3000/kronikles/${kronikle.id}`, {
+      method: 'PATCH',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -70,11 +70,7 @@ export function editKronikle(kronikle) {
       body: JSON.stringify(kronikle)
         })
         .then(resp => resp.json())
-        .then(allKronikles => {
-          console.log(allKronikles)
-          // dispatch({ type: 'EDIT_KRONIKLE_SUCCESS', payload: allKronikles})
-        })
-
+        .then(allKronikles =>dispatch({ type: 'EDIT_KRONIKLE_SUCCESS', payload: allKronikles }))
         .catch(error => dispatch({ type: 'EDIT_KRONIKLE_ERROR', error: error.message }));
     }
 };

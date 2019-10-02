@@ -3,12 +3,11 @@ import { connect } from 'react-redux';
 import {editKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class EditKronikle extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
-      title: '',
-      body: '',
-      id: ''
+      title: "",
+      body: ""
     }
   }
 
@@ -18,35 +17,26 @@ class EditKronikle extends React.Component {
       .then(resp => resp.json())
       .then(data => this.setState({
         title: data[0].title,
-        body: data[0].body,
-        id: id
+        body: data[0].body
       }))
   }
 
 
   handleChange = (e) => {
-      this.setState({
-        [e.target.name]: e.target.value
-      })
-    }
-
-
-// handleChange = (e) => {
-//     this.setState(prevState => ({
-//       ...prevState,
-//       [e.target.name]: e.target.value
-//       }));
-//   }
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.editKronikle(this.state)
+    this.props.editKronikle([this.state.title, this.state.body])
+    // this.setState({ title: "", body: "" })
     this.props.history.push('/');
   }
 
 
 render(){
-
   const { title, body } = this.state
 
   return (
@@ -58,6 +48,7 @@ render(){
         <textarea name="body" value={body} onChange={this.handleChange}/>
         <button type="submit">Submit edited Kronikle</button>
       </form>
+
     </div>
   )
 }}

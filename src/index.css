@@ -153,3 +153,18 @@ nav ul > * {
 .editKForm input:focus, .editKForm textarea:focus {
   color: var(--darkBrown);
 }
+
+
+/* ------------- MEDIA QUERIES  */
+@media only screen and (max-width: 600px) {
+  nav {
+    padding-top: 0;
+  }
+  .fas {
+    font-size: 1rem;
+    margin-left: .5rem;
+  }
+  #navLogo {
+    font-size: 1.2rem;
+  }
+}

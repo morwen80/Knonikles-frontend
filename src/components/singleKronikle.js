@@ -36,6 +36,10 @@ render(){
       <div className="kTitle">{title}</div>
       <div className="kBody">{body}</div>
 
+      <Link to={`/`}>
+        <button>Back</button>
+      </Link>
+
       <Link to={`/kronikles/${_id}/edit`}>
         <button>Edit</button>
       </Link>

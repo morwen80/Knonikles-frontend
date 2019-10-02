@@ -92,21 +92,11 @@ export default function kroniklesReducer(state = initialState, action){
       }
 
     case 'EDIT_KRONIKLE_SUCCESS':
-      const newKroniklesList = state.kronikles.map(k => k._id === action._id ? {k: action.payload} : k)
-    return {
-      // ...state,
+        return {
+      ...state,
       loading: false,
-      error: null,
-      kronikles: newKroniklesList
+      kronikles: action.payload
     };
-
-    // case 'EDIT_KRONIKLE_SUCCESS':
-    //     return {
-    //   ...state,
-    //   loading: false,
-    //   kronikles: action.payload
-    // };
-
 
 
     case 'EDIT_KRONIKLE_ERROR':
