@@ -30,14 +30,6 @@ class EditKronikle extends React.Component {
       })
     }
 
-
-// handleChange = (e) => {
-//     this.setState(prevState => ({
-//       ...prevState,
-//       [e.target.name]: e.target.value
-//       }));
-//   }
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.editKronikle(this.state)
@@ -46,7 +38,6 @@ class EditKronikle extends React.Component {
 
 
 render(){
-
   const { title, body } = this.state
 
   return (

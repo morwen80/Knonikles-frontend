@@ -12,6 +12,10 @@ class NewKronikle extends Component {
   }
 
   handleChange = (e) => {
+    if(this.state.title.length < 1) {
+      this.setState({ title: "No Title"})
+    } 
+
     this.setState({
       [e.target.name]: e.target.value
     })
@@ -19,8 +23,10 @@ class NewKronikle extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+
+
     this.props.addNewKronikle(this.state)
-    // this.setState({ title: "", body: "" })
     this.props.history.push('/');
   }
 
@@ -33,14 +39,14 @@ class NewKronikle extends Component {
 
         <form className="newKForm" onSubmit={this.handleSubmit} >
           <input
-            placeholder="title"
+            placeholder="Title"
             value={this.state.title}
             name="title"
             onChange={this.handleChange}
             />
 
           <textarea
-            placeholder="kronikle"
+            placeholder="Kronikle"
             value={this.state.body}
             name="body"
             onChange={this.handleChange}

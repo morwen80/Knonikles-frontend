@@ -25,6 +25,7 @@ button {
 }
 
 
+
 body {
   background-color: var(--brown);
   font-family: 'Noto Sans', sans-serif;
@@ -123,6 +124,21 @@ nav ul > * {
   background-color: var(--gold);
   font-weight: 700;
   margin-right: .6rem;
+}
+#deleteBtn {
+  background-color: red;
+  color: black;
+}
+
+#backBtn {
+  padding-top: 1.5rem;
+  border: 1px solid var(--brown);
+  background-color: var(--brown);
+  padding: 0;
+}
+#backBtn .fas {
+  font-size: 1.6rem;
+  color: var(--darkGrey);
 }
 
 /* SINGLE KRONIKLE  */

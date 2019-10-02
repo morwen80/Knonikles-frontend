@@ -36,15 +36,15 @@ render(){
       <div className="kTitle">{title}</div>
       <div className="kBody">{body}</div>
 
-      <Link to={`/`}>
-        <button>Back</button>
-      </Link>
-
       <Link to={`/kronikles/${_id}/edit`}>
-        <button>Edit</button>
+        <button id="editBtn">Edit</button>
       </Link>
 
-      <button onClick={this.onDelete}>Delete</button>
+      <button id="deleteBtn" onClick={this.onDelete}>Delete</button>
+      <br />
+      <Link to={`/`}>
+        <button id="backBtn"><i className="fas fa-chevron-circle-left"></i></button>
+      </Link>
     </div>
   )
 }
