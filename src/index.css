@@ -41,8 +41,6 @@ button {
 html {
   background-color: var(--brown);
   color: var(--darkGrey);
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,6 +48,8 @@ body {
   width: 70%;
   margin: 0 auto;
   background-color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.2rem;
 }
 
 h2 {
