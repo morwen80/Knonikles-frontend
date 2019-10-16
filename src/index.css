@@ -29,11 +29,11 @@ a:link, a:visited  {
 
 button {
   font-size: 1rem;
-  padding: .6rem 1.3rem;
+  padding: .5rem 1.3rem;
   border-radius: 5px;
   background-color: var(--gold);
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 1.2rem;
   margin-right: .6rem;
 }
@@ -67,6 +67,7 @@ h3 {
 .singleKronikle, .aboutPage {
   margin: 0 auto;
   width: 80%;
+  height: 100vh;
 }
 
 ul {
@@ -79,7 +80,7 @@ ul {
 /* HEADER */
 
 .fas {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #fff;
   transition: transform 1s;
 }
@@ -175,8 +176,8 @@ nav ul > * {
 
 #backBtn {
   margin-top: 1.5rem;
-  border: 1px solid var(--brown);
-  background-color: var(--brown);
+  border: 1px solid white;
+  background-color: white;
   padding: 0;
 }
 #backBtn .fas {
@@ -193,14 +194,20 @@ nav ul > * {
   font-size: 2.4rem;
   color: var(--darkBrown);
   font-weight: 700;
-  margin-bottom: 2rem;
+  padding: 2rem 0;
 }
 .kBody {
   font-size: 1.3rem;
   color: var(--darkBrown);
 }
 .singleKronikle button {
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+#editBtn:hover {
+  background-color: var(--red);
+  color: black;
+  letter-spacing: .2rem;
+  transition: all .6s;
 }
 
 /* EDIT A KRONIKLE */
@@ -231,15 +238,20 @@ nav ul > * {
 
 /* ------------- MEDIA QUERIES  */
 @media only screen and (max-width: 600px) {
+  body {
+    width: 100%
+  }
   nav {
     padding-top: 0;
   }
+  nav ul > * {
+    padding: 1.5rem 1.2rem 0 1.2rem;
+  }
   .fas {
-    font-size: 1rem;
-    margin-left: .5rem;
+    font-size: 1.2rem;
   }
   #navLogo {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   #kronikleSpace li {
     font-size: 1.2rem;

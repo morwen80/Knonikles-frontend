@@ -12,14 +12,12 @@ class SingleKronikle extends React.Component {
 }
 
 onDelete = () => {
-  // e.preventDefault()
   this.props.deleteKronikle(this.state.kronikle._id)
   this.props.history.push('/');
 }
 
 componentDidMount(){
   let id = this.props.match.params.id
-
   return fetch(`http://localhost:3000/kronikles/${id}`)
     .then(resp => resp.json())
     .then(data => this.setState({
