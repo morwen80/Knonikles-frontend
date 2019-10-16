@@ -15,7 +15,6 @@ const App = () =>
     <div>
       <Header />
       <Switch>
-
         <Route path='/' component={Home} exact={true} />
         <Route path='/kronikles' component={AllKronikles} exact={true} />
         <Route path='/kronikles/:id' component={SingleKronikle} exact={true} />
@@ -23,7 +22,6 @@ const App = () =>
         <Route path='/new' component={NewKronikle} />
         <Route path='/about' component={About} />
         <Route component={PageNotFound} />
-
       </Switch>
     </div>
   </BrowserRouter>

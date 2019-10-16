@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {editKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class EditKronikle extends React.Component {
@@ -48,7 +49,13 @@ render(){
         <br/>
         <textarea name="body" value={body} onChange={this.handleChange}/>
         <button type="submit">Submit edited Kronikle</button>
+
+        <br />
+        <Link to={`/`}>
+          <button id="backBtn"><i className="fas fa-chevron-circle-left"></i></button>
+        </Link>
       </form>
+
     </div>
   )
 }}
