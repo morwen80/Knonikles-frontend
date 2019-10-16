@@ -10,8 +10,6 @@ render(){
         <NavLink id="navLogo" activeClassName="is-active" to='/'>Kronikles</NavLink>
         <NavLink id="navShowAll" activeClassName="is-active" to='/'><i className="fas fa-copy" alt="All Kronikles"></i></NavLink>
         <NavLink id="navAddNew" to='/new'><i className="fas fa-plus" alt="Add Kronikle"></i></NavLink>
-
-        <NavLink to='/ADDLINK'><i className="fas fa-share-alt" alt="Share"></i></NavLink>
         <NavLink id="navAbout" to='/about'><i className="fas fa-question" alt="About"></i></NavLink>
       </ul>
     </nav>

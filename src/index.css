@@ -55,8 +55,9 @@ body {
 h2 {
   text-align: center;
   color: var(--darkBrown);
-  /* font-size: 2rem; */
-  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  padding: 2rem 0;
+
 }
 h3 {
   text-align: left;
@@ -64,7 +65,7 @@ h3 {
   padding: 1.6rem 0;
 }
 
-.singleKronikle, .aboutPage {
+.newKronikle, .singleKronikle, .editKronikle, .aboutPage {
   margin: 0 auto;
   width: 80%;
   height: 100vh;
@@ -80,7 +81,7 @@ ul {
 /* HEADER */
 
 .fas {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #fff;
   transition: transform 1s;
 }
@@ -91,7 +92,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  height: 4rem;
+  height: 3rem;
   width: 100%;
   background-color: var(--darkGreen);
 }
@@ -122,8 +123,6 @@ nav ul > * {
 
 /* HOMEPAGE WITH ALL THE NOTES PREVIEW */
 
-
-
 #kronikleSpace {
   width: 90%;
   height: 100vh;
@@ -148,14 +147,27 @@ nav ul > * {
 }
 
 /* NEW KRONIKLE */
-.newKronikleForm, .editKForm {
+
+
+.newKForm, .editKForm {
   margin: 0 auto;
   width: 80%;
+
 }
 
-.newKForm input, .newKForm textarea,
-.editKForm input, .editKForm textarea
- {
+.newKForm textarea, .editKForm textarea {
+  border: 1px solid var(--darkBrown);
+  background-color: white;
+  color: var(--darkGreen);
+  width: 95%;
+  padding: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.1rem;
+}
+
+.newKForm input, .editKForm input {
+  background-color: var(--darkBrown);
+  color: white;
   border: 1px solid var(--darkBrown);
   width: 95%;
   padding: 1rem;
@@ -237,7 +249,7 @@ nav ul > * {
 }
 
 /* ------------- MEDIA QUERIES  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   body {
     width: 100%
   }
@@ -257,4 +269,17 @@ nav ul > * {
     font-size: 1.2rem;
     padding: .5rem 1rem .5rem 1rem;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .fas {
+    font-size: .8rem;
+  }
+
+  #navLogo {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    padding: 0 1rem 0 0;
+  }
+
 }

@@ -32,8 +32,7 @@ class NewKronikle extends Component {
     return(
       <React.Fragment>
       <h2>Create a new Kronikle</h2>
-      <div className="newKronikleForm">
-
+      <div className="newKronikle">
         <form className="newKForm" onSubmit={this.handleSubmit} >
           <input
             placeholder="Title"
