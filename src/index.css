@@ -57,7 +57,6 @@ h2 {
   color: var(--darkBrown);
   font-size: 2rem;
   padding: 2rem 0;
-
 }
 h3 {
   text-align: left;
@@ -147,7 +146,6 @@ nav ul > * {
 }
 
 /* NEW KRONIKLE */
-
 
 .newKForm, .editKForm {
   margin: 0 auto;
@@ -249,7 +247,7 @@ nav ul > * {
 }
 
 /* ------------- MEDIA QUERIES  */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 900px) {
   body {
     width: 100%
   }
@@ -272,6 +270,14 @@ nav ul > * {
 }
 
 @media only screen and (max-width: 600px) {
+  html {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+    padding: 2rem 0 1.5rem 0;
+  }
+
   .fas {
     font-size: .8rem;
   }
@@ -281,5 +287,43 @@ nav ul > * {
     margin-bottom: 0.2rem;
     padding: 0 1rem 0 0;
   }
+
+  #backBtn .fas {
+    font-size: 1.3rem;
+  }
+
+  /* SINGLE KRONIKLE  */
+  .kTitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 2rem 0 1rem 0;
+  }
+  .kBody {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: .7rem;
+    padding: .4rem 1rem;
+    font-weight: 400;
+    margin-top: 1.2rem;
+    margin-right: .6rem;
+  }
+
+  /* NEW KRONIKLE */
+  .newKForm, .editKForm {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .newKForm textarea, .editKForm textarea,
+  .newKForm input, .editKForm input {
+    font-size: 1rem;
+  }
+
+  .newKForm input, .editKForm input {
+    color: white;
+  }
+
 
 }
