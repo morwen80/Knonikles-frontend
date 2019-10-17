@@ -20,12 +20,7 @@ a:link, a:visited  {
   text-decoration: none;
   cursor: pointer;
 }
-/* button {
-  background-color: var(--grey);
-  color: white;
-  padding: .5rem 1rem;
-  border-radius: 3px;
-} */
+
 
 button {
   font-size: 1rem;
@@ -132,10 +127,16 @@ nav ul > * {
 }
 
 #kronikleSpace li {
+
   font-size: 1.7rem;
   font-weight: 900;
   padding: .7rem 1rem .7rem 1rem;
   border-bottom: 1px solid var(--darkBrown);
+}
+#kronikleSpace a:hover {
+  letter-spacing: .2rem;
+  color: var(--darkBrown);
+  transition: all .6s;
 }
 #kronikleSpace li:last-child {
   border-bottom: none;
@@ -150,7 +151,6 @@ nav ul > * {
 .newKForm, .editKForm {
   margin: 0 auto;
   width: 80%;
-
 }
 
 .newKForm textarea, .editKForm textarea {

@@ -21,6 +21,8 @@ class NewKronikle extends Component {
     })
   }
 
+
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addNewKronikle(this.state)
@@ -47,7 +49,7 @@ class NewKronikle extends Component {
             name="body"
             onChange={this.handleChange}
             />
-          <button type="submit">Create </button>
+          <button type="submit" disabled={!this.state.title}>Create </button>
         </form>
       </div>
       </React.Fragment>
