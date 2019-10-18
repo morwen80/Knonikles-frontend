@@ -9,7 +9,7 @@ class EditKronikle extends React.Component {
     this.state = {
       title: '',
       body: '',
-      id: ''
+      _id: ''
     }
   }
 
@@ -20,7 +20,7 @@ class EditKronikle extends React.Component {
       .then(data => this.setState({
         title: data[0].title,
         body: data[0].body,
-        id: id
+        _id: id
       }))
   }
 
