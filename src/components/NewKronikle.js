@@ -21,14 +21,11 @@ class NewKronikle extends Component {
     })
   }
 
-
-
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addNewKronikle(this.state)
     this.props.history.push('/');
   }
-
 
   render(){
     return(
