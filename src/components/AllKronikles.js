@@ -13,6 +13,7 @@ class AllKronikles extends Component {
     const kList = this.props.kronikles.map( k =>
       <li key={k._id}>
       <Link to={`/kronikles/${k._id}`}>{k.title}</Link>
+      <p className="preview">{k.body}</p>
       </li>
     )
     return(
