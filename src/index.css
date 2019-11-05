@@ -68,9 +68,10 @@ h2 {
   padding: 7vmin 0;
 }
 h3 {
+  font-size: 3vmin;
   text-align: left;
   color: var(--darkBrown);
-  padding: 1.6rem 0;
+  padding: 5vmin 0;
 }
 
 .emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage {
@@ -258,13 +259,16 @@ nav ul {
 
 
 /* ABOUT PAGE */
+.aboutPage p {
+  font-size: 2.5vmin;
+}
 #social {
   display: flex;
   justify-content: center;
 }
 #social a {
-  font-size: 2.5rem;
-  margin: 0 1rem;
+  font-size: 4vmin;
+  margin: 0 2vmin;
   color: var(--gold);
 }
 
