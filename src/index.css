@@ -18,6 +18,7 @@
   --red: #c94808;
 }
 
+
 a:link, a:visited  {
   color: var(--gold);
   text-decoration: none;
@@ -25,19 +26,32 @@ a:link, a:visited  {
 }
 
 button {
-  font-size: 1rem;
-  padding: .5rem 1.3rem;
+  font-size: 2.5vmin;
+  padding: 1.5vmin 2rem;
   border-radius: 5px;
   background-color: var(--gold);
   color: #fff;
   font-weight: 400;
-  margin-top: 1.2rem;
-  margin-right: .6rem;
+  margin-top: 2.5vmin;
+  margin-right: .5vmin;
 }
+
+#root {
+  min-height: 100vh;
+  /* margin: 0;
+  padding: 0; */
+}
+
+html, body {
+  margin: 0 auto;
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--darkGrey);
+  font-size: 1.1rem;
+}
+
 
 html {
   background-color: var(--brown);
-  color: var(--darkGrey);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -45,8 +59,6 @@ body {
   width: 70%;
   margin: 0 auto;
   background-color: white;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 1.2rem;
 }
 
 h2 {
@@ -64,7 +76,6 @@ h3 {
 .emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage {
   margin: 0 auto;
   width: 80%;
-  height: 100vh;
 }
 
 ul {
@@ -160,31 +171,40 @@ nav ul {
 .newKForm, .editKForm {
   margin: 0 auto;
   width: 80%;
+  height: 100vh;
+
 }
 
-.newKForm textarea, .editKForm textarea {
+.newKForm textarea, .editKBody {
+  /* display: inline-block;  */
   border: 1px solid var(--darkBrown);
   background-color: white;
   color: var(--darkGreen);
-  width: 95%;
-  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.newKForm textarea, #editKBodyTextArea {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 2.5vmin;
+  min-height: 30px;
+  padding: 1.5vmin 0 1.5vmin 1.5vmin;
+  width: 95%;
 }
 
 .newKForm input, .editKForm input {
   background-color: var(--darkBrown);
   color: white;
-  border: 1px solid var(--darkBrown);
-  width: 95%;
-  padding: 1rem;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2.5vmin 0 2vmin 2vmin;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 2.7vmin;
 }
 
 .newKForm textarea {
   height: 40vh;
-  margin-bottom: .6rem;
+  margin-bottom: 1vmin;
   resize: none;
 }
 
@@ -214,10 +234,11 @@ nav ul {
   font-size: 4.6vmin;
   color: var(--darkBrown);
   font-weight: 700;
-  padding: 8vmin 0 4vmin;
+  padding: 8vmin 0 4vmin 0;
 }
 .kBody {
-  font-size: 3vmin;
+  font-size: 2.7vmin;
+  line-height: 155%;
   color: var(--darkBrown);
 }
 .singleKronikle button {
@@ -231,10 +252,10 @@ nav ul {
 }
 
 /* EDIT A KRONIKLE */
-.editKForm input, .editKForm textarea {
+.editKForm input, .editKBody {
   color: var(--grey);
 }
-.editKForm input:focus, .editKForm textarea:focus {
+.editKForm input:focus, .editKBody:focus {
   color: var(--darkBrown);
 }
 
@@ -258,18 +279,10 @@ nav ul {
 
 
 /* ----------------------- MEDIA QUERY --------------- */
-@media only screen and (max-width: 900px) {
+ @media only screen and (max-width: 600px) {
   body {
     width: 100%;
   }
 
 
-}
-
-
-@media only screen and (max-width: 600px) {
-  /* nav ul > * {
-    font-size: 2rem;
-     padding: 1.5rem 2rem 0 2rem;
-    } */
 }

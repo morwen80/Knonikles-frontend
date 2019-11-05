@@ -14,7 +14,7 @@ class AllKronikles extends Component {
       return (
         <li key={k._id} className="kCard">
         <Link to={`/kronikles/${k._id}`}>{k.title}</Link>
-        <p className="preview">{k.body}</p>
+        <p className="preview">{k.body.slice(0, 100)}</p>
         </li>
       )
     }

@@ -25,7 +25,6 @@ componentDidMount(){
     }))
 }
 
-
 render(){
   const { _id, title, body } = this.state.kronikle
 

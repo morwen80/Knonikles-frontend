@@ -29,9 +29,9 @@ class NewKronikle extends Component {
 
   render(){
     return(
-      <React.Fragment>
-      <h2>Create a new Kronikle</h2>
       <div className="newKronikle">
+      <h2>Create a new Kronikle</h2>
+
         <form className="newKForm" onSubmit={this.handleSubmit} >
           <input
             placeholder="Title"
@@ -49,7 +49,6 @@ class NewKronikle extends Component {
           <button type="submit" disabled={!this.state.title}>Create </button>
         </form>
       </div>
-      </React.Fragment>
     )
   }
 }
