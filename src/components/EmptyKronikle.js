@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EmptyKronikle = () => (
   <div className="emptyList">
-    <h1>Your Kronikle is empty</h1>
-    <button>Click to add one</button>
+    <h2>Your Kronikle List is Empty</h2>
+    <Link to="/new"> Click to add one</Link>
   </div>
 )
 

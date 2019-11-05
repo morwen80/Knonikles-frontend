@@ -10,11 +10,14 @@ class AllKronikles extends Component {
   }
 
   render(){
-    const kList = this.props.kronikles.map( k =>
-      <li key={k._id}>
-      <Link to={`/kronikles/${k._id}`}>{k.title}</Link>
-      <p className="preview">{k.body}</p>
-      </li>
+    const kList = this.props.kronikles.map( k => {
+      return (
+        <li key={k._id} className="kCard">
+        <Link to={`/kronikles/${k._id}`}>{k.title}</Link>
+        <p className="preview">{k.body}</p>
+        </li>
+      )
+    }
     )
     return(
       <div id="kronikleSpace">

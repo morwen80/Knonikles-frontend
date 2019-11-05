@@ -10,6 +10,7 @@
   --brown: #E8D8BD;
   --lightBrown: #ba8132;
   --darkBrown: #714a12;
+  --lightGreen: #ede2b8;
   --darkGreen: #353121;
   --grey: #A8A1A8;
   --darkGrey: #393F4F;
@@ -51,8 +52,8 @@ body {
 h2 {
   text-align: center;
   color: var(--darkBrown);
-  font-size: 2rem;
-  padding: 2rem 0;
+  font-size: 3.5vmin;
+  padding: 7vmin 0;
 }
 h3 {
   text-align: left;
@@ -60,7 +61,7 @@ h3 {
   padding: 1.6rem 0;
 }
 
-.newKronikle, .singleKronikle, .editKronikle, .aboutPage {
+.emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage {
   margin: 0 auto;
   width: 80%;
   height: 100vh;
@@ -81,7 +82,7 @@ ul {
   transition: transform 1s;
 }
 nav .fas:hover {
-  transform: translateY(-1.3rem);
+  transform: translateY(-2.5vmin);
 }
 nav {
   width: 100%;
@@ -118,15 +119,17 @@ nav ul > * {
   width: 90%;
   height: 100vh;
   margin: 0 auto;
-  padding: 4vmin 0 0 0;
+  padding: 6vmin 0 0 0;
 
 }
 
-#kronikleSpace li {
+.kCard {
   font-size: 3vmin;
   font-weight: 900;
   padding: .7rem 1rem .7rem 1rem;
-  border-bottom: 1px solid var(--darkBrown);
+  border: 1px solid var(--lightGreen);
+  border-radius: 15px;
+  margin-bottom: .7vmin;
 }
 .preview {
   font-size: 2vmin;
@@ -138,9 +141,9 @@ nav ul > * {
   color: var(--darkBrown);
   transition: all .6s;
 }
-#kronikleSpace li:last-child {
+/* #kronikleSpace li:last-child {
   border-bottom: none;
-}
+} */
 
 .fa-chevron-right {
   float: right;
@@ -202,13 +205,13 @@ nav ul > * {
   font-family: 'Abril Fatface', cursive;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 4.6vmin;
   color: var(--darkBrown);
   font-weight: 700;
-  padding: 2rem 0;
+  padding: 8vmin 0 4vmin;
 }
 .kBody {
-  font-size: 1.3rem;
+  font-size: 3vmin;
   color: var(--darkBrown);
 }
 .singleKronikle button {
