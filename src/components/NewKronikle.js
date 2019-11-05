@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import  { addNewKronikle } from '../actions/kronikle_actions';
+import TextareaAutosize from 'react-autosize-textarea';
 
 class NewKronikle extends Component {
   constructor(){
@@ -39,13 +40,16 @@ class NewKronikle extends Component {
             name="title"
             onChange={this.handleChange}
             />
-
-          <textarea
+          <div className="formBody">
+          <TextareaAutosize
+            id="newKBodyTextArea" 
+            style={{ minHeight: 20, maxHeight: 280 }}
             placeholder="Kronikle"
             value={this.state.body}
             name="body"
             onChange={this.handleChange}
             />
+            </div>
           <button type="submit" disabled={!this.state.title}>Create </button>
         </form>
       </div>

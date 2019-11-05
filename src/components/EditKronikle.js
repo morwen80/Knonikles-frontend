@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import TextareaAutosize from 'react-autosize-textarea';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {editKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class EditKronikle extends React.Component {
@@ -47,14 +49,14 @@ render(){
       <form className="editKForm" onSubmit={this.handleSubmit} >
         <input type="text" name="title" value={title} onChange={this.handleChange}/>
         <br/>
-        <div className="editKBody">
+        <div className="formBody">
           <TextareaAutosize id="editKBodyTextArea" style={{ minHeight: 20, maxHeight: 280 }} name="body" value={body} onChange={this.handleChange}/>
         </div>
         <button type="submit">Submit edited Kronikle</button>
 
         <br />
         <Link to={`/`}>
-          <button id="backBtn"><i className="fas fa-chevron-circle-left"></i></button>
+          <div id="backBtn"><FontAwesomeIcon icon="chevron-left"/></div>
         </Link>
       </form>
     </div>

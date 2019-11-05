@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faPlus, faQuestion, faCopy } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faQuestion, faCopy, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home'
@@ -14,7 +14,7 @@ import AllKronikles from './components/AllKronikles'
 import PageNotFound from './components/PageNotFound'
 import EditKronikle from './components/EditKronikle'
 
-library.add (fab, faPlus, faQuestion, faCopy)
+library.add (fab, faPlus, faQuestion, faCopy, faChevronLeft)
 const App = () =>
 
   <BrowserRouter>

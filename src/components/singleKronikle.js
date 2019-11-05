@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class SingleKronikle extends React.Component {
@@ -40,7 +41,7 @@ render(){
       <button id="deleteBtn" onClick={this.onDelete}>Delete</button>
       <br />
       <Link to={`/`}>
-        <button id="backBtn"><i className="fas fa-chevron-circle-left"></i></button>
+          <div id="backBtn"><FontAwesomeIcon icon="chevron-left"/></div>
       </Link>
     </div>
   )

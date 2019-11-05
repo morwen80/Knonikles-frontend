@@ -27,7 +27,7 @@ a:link, a:visited  {
 
 button {
   font-size: 2.5vmin;
-  padding: 1.5vmin 2rem;
+  padding: 1.5vmin 3.5vmin;
   border-radius: 5px;
   background-color: var(--gold);
   color: #fff;
@@ -158,24 +158,18 @@ nav ul {
   color: var(--darkBrown);
   transition: all .6s;
 }
-/* #kronikleSpace li:last-child {
-  border-bottom: none;
-} */
 
-.fa-chevron-right {
-  float: right;
-}
 
 /* NEW KRONIKLE */
 
 .newKForm, .editKForm {
   margin: 0 auto;
   width: 80%;
-  height: 100vh;
+  /* height: 100vh; */
 
 }
 
-.newKForm textarea, .editKBody {
+.formBody {
   /* display: inline-block;  */
   border: 1px solid var(--darkBrown);
   background-color: white;
@@ -183,7 +177,7 @@ nav ul {
   width: 100%;
   box-sizing: border-box;
 }
-.newKForm textarea, #editKBodyTextArea {
+#newKBodyTextArea, #editKBodyTextArea {
   font-family: 'Noto Sans', sans-serif;
   font-size: 2.5vmin;
   min-height: 30px;
@@ -201,12 +195,16 @@ nav ul {
   font-family: 'Noto Sans', sans-serif;
   font-size: 2.7vmin;
 }
+.newKForm input {
+  background-color: var(--brown);
+  border: 1px solid var(--darkBrown);
+}
 
-.newKForm textarea {
+/* .newKForm textarea {
   height: 40vh;
   margin-bottom: 1vmin;
   resize: none;
-}
+} */
 
 #deleteBtn {
   background-color: var(--red);
@@ -214,13 +212,12 @@ nav ul {
 }
 
 #backBtn {
-  margin-top: 1.5rem;
-  border: 1px solid white;
-  background-color: white;
-  padding: 0;
+  width: 4vmin;
+  height: 4vmin;
+  margin-top: 3.5vmin;
 }
-#backBtn .fas {
-  font-size: 1.6rem;
+#backBtn > * {
+  font-size: 4vmin;
   color: var(--darkGrey);
   margin: 0;
 }
@@ -253,10 +250,10 @@ nav ul {
 
 /* EDIT A KRONIKLE */
 .editKForm input, .editKBody {
-  color: var(--grey);
+  color: var(--brown);
 }
 .editKForm input:focus, .editKBody:focus {
-  color: var(--darkBrown);
+  color: var(--brown);
 }
 
 
@@ -283,6 +280,4 @@ nav ul {
   body {
     width: 100%;
   }
-
-
 }
