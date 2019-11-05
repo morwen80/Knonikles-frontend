@@ -76,23 +76,32 @@ ul {
 
 /* HEADER */
 
-.fas {
-  font-size: 3.7vmin;
+.fa-plus, .fa-question, .fa-copy {
+  font-size: 3.5vmin;
   color: #fff;
+  padding: 3vmin 4.5vmin 0 4.5vmin;
   transition: transform 1s;
 }
-nav .fas:hover {
+.fa-plus:hover,
+.fa-question:hover,
+.fa-copy:hover {
   transform: translateY(-2.5vmin);
 }
-nav {
+nav ul {
+  margin: 0;
+  padding: 0;
   width: 100%;
   background-color: var(--darkGreen);
+  display: flex;
+  justify-content: flex-start;
 }
 
-nav ul > * {
-  font-size: 2rem;
-   padding: 3.5vmin 4.5vmin 0 4.5vmin;
+nav ul:not(:first-child) {
+  border: 1px solid white;
+  padding: 0 4.5vmin 0 4.5vmin;
+
 }
+
 #navShowAll {
   background-color: var(--grey);
 }
@@ -106,10 +115,9 @@ nav ul > * {
 #navLogo {
   font-family: 'Abril Fatface', cursive;
   color: var(--lightBrown);
-  font-size: 5vmin;
+  font-size: 6vmin;
   margin-bottom: 0.2rem;
   padding: 0 2rem 0 2rem;
-  /* line-height: 90%; */
 }
 
 

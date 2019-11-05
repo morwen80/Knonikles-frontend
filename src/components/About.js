@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const About = () => (
   <div className="aboutPage">
@@ -13,16 +14,22 @@ const About = () => (
 
     <div id="social">
       <a href="https://github.com/morwen80" target="_blank" rel="noopener noreferrer" alt="Github page">
-        <i className="fab fa-github-alt"></i>
+        <FontAwesomeIcon icon={['fab', 'github-alt']} />
       </a>
 
-      <a href="https://twitter.com/ValeriaRagonese" target="_blank" rel="noopener noreferrer" alt="twitter">
-        <i className="fab fa-twitter"></i>
+      <a href="https://www.linkedin.com/in/valeriaragonese/" target="_blank" rel="noopener noreferrer" alt="linkedIn profile">
+        <FontAwesomeIcon icon={['fab', 'linkedin']} />
       </a>
 
-      <a href="https://www.instagram.com/valeria.ragonese/" target="_blank" rel="noopener noreferrer" alt="instagram">
-        <i className="fab fa-instagram"></i>
+      <a href="https://twitter.com/ValeriaRagonese" target="_blank" rel="noopener noreferrer" alt="twitter page">
+        <FontAwesomeIcon icon={['fab', 'twitter']} />
       </a>
+
+      <a href="https://www.instagram.com/valeria.ragonese/" target="_blank" rel="noopener noreferrer" alt="instagram profile">
+        <FontAwesomeIcon icon={['fab', 'instagram']} />
+      </a>
+
+
 
 
     </div>
