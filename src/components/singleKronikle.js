@@ -19,7 +19,7 @@ onDelete = () => {
 
 componentDidMount(){
   let id = this.props.match.params.id
-  return fetch(`http://localhost:3000/kronikles/${id}`)
+  return fetch(`https://kronikles-server.herokuapp.com/kronikles/${id}`)
     .then(resp => resp.json())
     .then(data => this.setState({
       kronikle: data[0]

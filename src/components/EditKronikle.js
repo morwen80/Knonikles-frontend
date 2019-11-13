@@ -18,7 +18,7 @@ class EditKronikle extends React.Component {
 
   componentDidMount(){
     let id = this.props.match.params.id
-    return fetch(`http://localhost:3000/kronikles/${id}`)
+    return fetch(`https://kronikles-server.herokuapp.com/kronikles/${id}`)
       .then(resp => resp.json())
       .then(data => this.setState({
         title: data[0].title,

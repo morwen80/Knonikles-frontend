@@ -18,8 +18,8 @@ class AllKronikles extends Component {
         </li>
       )
     }
-    )
-    return(
+  )
+    return (
       <div id="kronikleSpace">
       <ul>
         {kList}

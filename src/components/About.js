@@ -7,7 +7,7 @@ const About = () => (
     <p>
       Kronikles is a note editor with a bit of a pirat-y edge.
       <br/>
-      The app has been created by <strong>Valeria Ragonese</strong>, a lover of fantasy books
+      This web app has been created by <strong>Valeria Ragonese</strong>, a lover of fantasy books
       and colorful websites.
     </p>
     <h3>Get to know her</h3>
