@@ -3,7 +3,6 @@
 * {
   padding: 0;
   margin: 0;
-  /* border: 1px solid red; */
 }
 
 :root {
@@ -261,6 +260,22 @@ nav ul {
 /* ABOUT PAGE */
 .aboutPage p {
   font-size: 2.5vmin;
+  padding-bottom: 2vmin;
+}
+#github-links {
+  padding-top: 3vmin;
+  text-align: center;
+}
+#github-links a {
+  font-size: 2.8vmin;
+  margin: auto 1vmin;
+  color: #fff;
+  background-color: var(--gold);
+  padding: .5vmin 1vmin;
+  transition: all .5s;
+}
+#github-links a:hover {
+  background-color: var(--darkBrown);
 }
 #social {
   display: flex;
