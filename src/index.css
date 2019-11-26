@@ -193,16 +193,7 @@ nav ul {
   color: black;
 }
 
-#backBtn {
-  width: 4vmin;
-  height: 4vmin;
-  margin-top: 3.5vmin;
-}
-#backBtn > * {
-  font-size: 4vmin;
-  color: var(--darkGrey);
-  margin: 0;
-}
+
 
 /* SINGLE KRONIKLE  */
 
@@ -237,7 +228,16 @@ nav ul {
 .editKForm input:focus, .editKBody:focus {
   color: var(--brown);
 }
-
+#backBtn {
+  width: 4vmin;
+  height: 4vmin;
+  margin-top: 3.5vmin;
+}
+#backBtn > * {
+  font-size: 4vmin;
+  color: var(--darkGrey);
+  margin: 0;
+}
 
 /* ABOUT PAGE */
 .aboutPage p {
@@ -295,8 +295,7 @@ nav ul {
     font-size: 6vmin;
   }
   h3 {
-    font-size: 3vmin;
-    padding: 5vmin 0;
+    font-size: 5vmin;
   }
 
   .emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage, .lost {
@@ -346,4 +345,46 @@ nav ul {
     font-size: 5vmin;
   }
 
+  /* SINGLE KRONIKLE  */
+  .kTitle {
+    font-size: 8vmin;
+  }
+  .kBody {
+    font-size: 5vmin;
+    padding-bottom: 7vmin;
+  }
+  .singleKronikle button {
+    margin-top: .3vmin;
+  }
+
+  /* EDIT  */
+  #backBtn {
+    margin: 8vmin 0;
+  }
+  #backBtn > * {
+    font-size: 7vmin;
+  }
+
+  /* ABOUT PAGE */
+  .aboutPage p {
+    font-size: 5.2vmin;
+  }
+  #github-links {
+    padding-top: 5vmin;
+  }
+  #github-links a {
+    font-size: 5.5vmin;
+    padding: 1vmin 1.5vmin;
+  }
+  #social a {
+    color: var(--darkGreen);
+    font-size: 8vmin;
+    margin: 0 2vmin;
+  }
+
+  #social a:hover {
+    color: var(--darkBrown);
+    font-size: 3rem;
+    transition: all .5s;
+  }
 }
