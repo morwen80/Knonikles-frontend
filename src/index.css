@@ -17,7 +17,6 @@
   --red: #c94808;
 }
 
-
 a:link, a:visited  {
   color: var(--gold);
   text-decoration: none;
@@ -37,17 +36,14 @@ button {
 
 #root {
   min-height: 100vh;
-  /* margin: 0;
-  padding: 0; */
 }
 
 html, body {
   margin: 0 auto;
   font-family: 'Noto Sans', sans-serif;
   color: var(--darkGrey);
-  font-size: 1.1rem;
+  font-size: 16px;
 }
-
 
 html {
   background-color: var(--brown);
@@ -85,14 +81,12 @@ ul {
 /*   END COMMONS */
 
 
-/* HEADER */
-
+/* NAVIGATION */
 .fa-plus, .fa-question, .fa-copy {
   font-size: 3.5vmin;
   color: #fff;
   padding: 0 4.5vmin 0 4.5vmin;
   transition: transform 1s;
-
 }
 .fa-plus:hover,
 .fa-question:hover,
@@ -129,7 +123,6 @@ nav ul {
   padding: 0 4vmin 0 4vmin;
 }
 
-
 /* HOMEPAGE WITH ALL THE NOTES PREVIEW */
 
 #kronikleSpace {
@@ -137,7 +130,6 @@ nav ul {
   height: 100vh;
   margin: 0 auto;
   padding: 6vmin 0 0 0;
-
 }
 
 .kCard {
@@ -159,18 +151,13 @@ nav ul {
   transition: all .6s;
 }
 
-
 /* NEW KRONIKLE */
-
 .newKForm, .editKForm {
   margin: 0 auto;
   width: 80%;
-  /* height: 100vh; */
-
 }
 
 .formBody {
-  /* display: inline-block;  */
   border: 1px solid var(--darkBrown);
   background-color: white;
   color: var(--darkGreen);
@@ -183,11 +170,12 @@ nav ul {
   min-height: 30px;
   padding: 1.5vmin 0 1.5vmin 1.5vmin;
   width: 95%;
+
 }
 
 .newKForm input, .editKForm input {
   background-color: var(--darkBrown);
-  color: white;
+  color: var(--darkGreen);
   border: none;
   width: 100%;
   box-sizing: border-box;
@@ -199,12 +187,6 @@ nav ul {
   background-color: var(--brown);
   border: 1px solid var(--darkBrown);
 }
-
-/* .newKForm textarea {
-  height: 40vh;
-  margin-bottom: 1vmin;
-  resize: none;
-} */
 
 #deleteBtn {
   background-color: var(--red);
@@ -297,6 +279,71 @@ nav ul {
 /* ----------------------- MEDIA QUERY --------------- */
  @media only screen and (max-width: 600px) {
   body {
+    font-size: 20px;
     width: 100%;
   }
+  button {
+    width: 100%;
+    font-size: 6vmin;
+    margin-top: 5vmin;
+  }
+  body {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 6vmin;
+  }
+  h3 {
+    font-size: 3vmin;
+    padding: 5vmin 0;
+  }
+
+  .emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage, .lost {
+    width: 95%;
+  }
+
+
+  /* NAVIGATION  */
+  nav ul {
+    height: 13vmin;
+  }
+  #navLogo {
+    font-size: 8.5vmin;
+  }
+
+  .fa-plus, .fa-question, .fa-copy {
+    font-size: 5.5vmin;
+    padding: 0 4.5vmin 0 4.5vmin;
+  }
+
+  /* HOMEPAGE */
+  #kronikleSpace {
+    width: 100%;
+  }
+  .kCard {
+    font-size: 6vmin;
+    padding: .7rem;
+    border-radius: 0;
+    margin-bottom: 2vmin;
+  }
+  .preview {
+    font-size: 4vmin;
+  }
+
+
+  /* NEW KRONIKLE */
+  .newKForm, .editKForm {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #newKBodyTextArea, #editKBodyTextArea {
+    font-size: 4.5vmin;
+    min-height: 60px;
+  }
+
+  .newKForm input, .editKForm input {
+    font-size: 5vmin;
+  }
+
 }
