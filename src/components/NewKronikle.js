@@ -33,26 +33,26 @@ class NewKronikle extends Component {
       <div className="newKronikle">
       <h2>Create a new Kronikle</h2>
 
-        <form className="newKForm" onSubmit={this.handleSubmit} >
-          <input
-            placeholder="Title"
-            value={this.state.title}
-            name="title"
-            onChange={this.handleChange}
-            />
-          <div className="formBody">
-          <TextareaAutosize
-            id="newKBodyTextArea" 
-            style={{ minHeight: 20, maxHeight: 280 }}
-            placeholder="Kronikle"
-            value={this.state.body}
-            name="body"
-            onChange={this.handleChange}
-            />
-            </div>
-          <button type="submit" disabled={!this.state.title}>Create </button>
-        </form>
-      </div>
+      <form className="newKForm" onSubmit={this.handleSubmit} >
+        <input
+          placeholder="Title"
+          value={this.state.title}
+          name="title"
+          onChange={this.handleChange}
+          />
+        <div className="formBody">
+        <TextareaAutosize
+          id="newKBodyTextArea"
+          style={{ minHeight: 20, maxHeight: 280 }}
+          placeholder="Kronikle"
+          value={this.state.body}
+          name="body"
+          onChange={this.handleChange}
+          />
+          </div>
+        <button type="submit" disabled={!this.state.title}>Create </button>
+      </form>
+    </div>
     )
   }
 }

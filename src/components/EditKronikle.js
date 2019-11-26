@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import TextareaAutosize from 'react-autosize-textarea';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import {editKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
+import { editKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class EditKronikle extends React.Component {
   constructor(props){
@@ -28,10 +28,10 @@ class EditKronikle extends React.Component {
   }
 
   handleChange = (e) => {
-      this.setState({
-        [e.target.name]: e.target.value
-      })
-    }
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -53,7 +53,6 @@ render(){
           <TextareaAutosize id="editKBodyTextArea" style={{ minHeight: 20, maxHeight: 280 }} name="body" value={body} onChange={this.handleChange}/>
         </div>
         <button type="submit">Submit edited Kronikle</button>
-
         <br />
         <Link to={`/`}>
           <div id="backBtn"><FontAwesomeIcon icon="chevron-left"/></div>

@@ -14,7 +14,7 @@ const About = () => (
     <p>
       You can take a look at the code of these pages on Github:
       <div id="github-links">
-        <a href="https://github.com/morwen80/Kronikles-frontend" target="_blank" rel="noopener noreferrer"><strong>Front End</strong></a> 
+        <a href="https://github.com/morwen80/Kronikles-frontend" target="_blank" rel="noopener noreferrer"><strong>Front End</strong></a>
         <a href="https://github.com/morwen80/kronikles-server" target="_blank" rel="noopener noreferrer"><strong>Back End</strong></a>
       </div>
     </p>
@@ -36,12 +36,7 @@ const About = () => (
       <a href="https://www.instagram.com/valeria.ragonese/" target="_blank" rel="noopener noreferrer" alt="instagram profile">
         <FontAwesomeIcon icon={['fab', 'instagram']} />
       </a>
-
-
-
-
     </div>
-
   </div>
 )
 

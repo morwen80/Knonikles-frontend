@@ -73,7 +73,7 @@ h3 {
   padding: 5vmin 0;
 }
 
-.emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage {
+.emptyList, .newKronikle, .singleKronikle, .editKronikle, .aboutPage, .lost {
   margin: 0 auto;
   width: 80%;
 }
