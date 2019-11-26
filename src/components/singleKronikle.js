@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
+import { deleteKronikle, fetchSingleKronikle } from '../actions/kronikle_actions';
 
 class SingleKronikle extends React.Component {
   constructor(props){
