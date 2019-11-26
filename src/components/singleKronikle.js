@@ -44,10 +44,8 @@ render(){
           <div id="backBtn"><FontAwesomeIcon icon="chevron-left"/></div>
       </Link>
     </div>
-  )
+  )}
 }
-}
-
 
 const mapDispatchToProps = dispatch => {
   return {
